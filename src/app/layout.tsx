@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
+import { Button, Drawer } from '@mui/material';
+import SideNav from "./ui/sidenav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,10 +26,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Link href="/">
-          Home
-        </Link>
+        <SideNav/>
         {children}
       </body>
     </html>
