@@ -1,8 +1,7 @@
-import { getOneEmployee } from "../lib/employee-api";
 
 
 export default async function EmployeeDetail() {
-    const employee = await getOneEmployee();
+    const employee = { firstName: "John"}
 
     return (
         <div>
