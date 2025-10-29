@@ -11,3 +11,8 @@ export type Employee = {
     payGrade: number;
     yearlySalary: number;
 };
+
+export type Greeting = {
+    id: number;
+    when: string;
+};
