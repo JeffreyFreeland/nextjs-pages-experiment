@@ -14,7 +14,7 @@ export async function getOneEmployee(): Promise<Employee> {
 }
 
 export async function getAllGreetings(): Promise<Greeting[]> {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/greetings/`);
+    const response = await fetch("https://frozen-atoll-59238-b6c16938cfa9.herokuapp.com/api/greetings/");
 
     if(!response.ok) {
         console.log(JSON.stringify(response));
