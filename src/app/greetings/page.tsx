@@ -19,7 +19,7 @@ export default function Page() {
             <div>Greetings page works! <strong>{process.env.NEXT_PUBLIC_API_BASE}</strong></div>
             <ul>
                 {greetings.map((greeting) => (
-                    <li>{greeting.when}</li>
+                    <li key={greeting.id}>{greeting.when}</li>
                 ))};
             </ul>
         </div>
